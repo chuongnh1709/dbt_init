@@ -3,3 +3,4 @@ dbt-postgres
 dbt-redshift
 dbt-snowflake
 dbt-bigquery
+dbt-oracle
