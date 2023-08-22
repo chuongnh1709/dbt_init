@@ -32,7 +32,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   learn_dbt:
     analytics:
-      +materialized: table
+      +materialized: view # table
 
       role_playing_dimensions:
         +materialized: view

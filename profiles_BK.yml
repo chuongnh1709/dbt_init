@@ -1,13 +1,13 @@
 # Documentation: https://docs.getdbt.com/docs/get-started/connection-profiles
 
 dbt_test_d5:
-   target: "{{ env_var('DBT_TARGET', 'dev') }}"
+   target: dev # "{{ env_var('DBT_TARGET', 'dev') }}"
    outputs:
       dev:
          type: oracle
          user: "{{ env_var('DBT_ORACLE_USER') }}"
          pass: "{{ env_var('DBT_ORACLE_PASSWORD') }}"
-         protocol: "tcps"
+         protocol: "tcp"
          host: "{{ env_var('DBT_ORACLE_HOST') }}"
          port: 1521
          service: "{{ env_var('DBT_ORACLE_SERVICE') }}"
@@ -15,4 +15,4 @@ dbt_test_d5:
          schema: "{{ env_var('DBT_ORACLE_SCHEMA') }}"
          retry_count: 1
          retry_delay: 3
-         threads: 4
+         threads: 4 
