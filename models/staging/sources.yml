@@ -1,0 +1,14 @@
+version: 2
+
+# https://docs.getdbt.com/docs/build/sources
+# https://docs.getdbt.com/reference/resource-properties/database
+
+sources: 
+  - name: bq_source # source_name
+    config:
+      enabled: true
+    database: learn-dbt-397522 # BQ project Name
+    schema: dbt_bigquery # BQ dataset
+    tables:
+      - name: listing_sample
+      - name: tiny_t

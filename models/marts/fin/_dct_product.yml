@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dct_product
+    description: > # long description 
+      This table has basic information about a contact, 
+      as well as some derived facts of a contact's activity 
+      with the JaffleGaggle platform
+    tags:
+      - daily
+    meta:
+      owner: "@chuong"
+      model_maturity: in dev
+      contains_pii: true
+    columns:
+      - name: product_id
+        contains_pii: true
+        tests:
+          #- dbt_constraints.primary_key
+          - not_null
+          - unique
